@@ -1,0 +1,21 @@
+.remove-book {
+    margin-left: 5px;
+}
+
+.list-left-margin {
+    margin-left: 15px;
+}
+
+ul.demo {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.rcorners {
+    border-radius: .5px;
+}

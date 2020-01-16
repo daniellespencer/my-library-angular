@@ -1,14 +1,16 @@
 <div class="row">
     <div class="col-xs-12">
-        <ul *ngFor="let book of books">
+        <h2>{{name}}</h2>
+        <ul class="demo" *ngFor="let book of books">
             <li>{{book.title}}</li>
             <li>{{book.author}}</li>
             <li>{{book.year}}</li>
+            <hr>
         </ul>
     </div>
 </div>
-<label>Title<input type="text" [(ngModel)]="newTitle"></label>
-<label>Author<input type="text" [(ngModel)]="newAuthor"></label>
-<label>Year<input type="text" [(ngModel)]="newYear"></label>
-<button class="btn btn-primary" (click)="addBook()">Add book</button>
-<button class="btn btn-primary" (click)="removeBook()">Remove book</button>
+<label class="list-left-margin">Title:<br><input type="text" class="rcorners" [(ngModel)]="newTitle"></label>
+<label class="list-left-margin">Author:<br><input type="text" class="rcorners" [(ngModel)]="newAuthor"></label>
+<label class="list-left-margin">Year:<br><input type="text" class="rcorners" [(ngModel)]="newYear"></label><br>
+<button class="btn btn-primary list-left-margin btn-sm" (click)="addBook(); reference.value=''">Add book</button>
+<button class="btn btn-warning remove-book btn-sm" (click)="removeBook()">Remove book</button>

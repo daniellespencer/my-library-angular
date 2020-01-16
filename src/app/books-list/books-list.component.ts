@@ -8,13 +8,12 @@ import { Book } from './books.model';
 })
 export class BooksListComponent implements OnInit {
   @Input() books: Book[];
-  
+  @Input() name: string;   
 
   newTitle: string;
   newAuthor: string;
   newYear: number;  
-  //removeBook = false;
-
+  
   constructor() { }
 
   ngOnInit() {
