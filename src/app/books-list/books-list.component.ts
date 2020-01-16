@@ -7,16 +7,12 @@ import { Book } from './books.model';
   styleUrls: ['./books-list.component.css']
 })
 export class BooksListComponent implements OnInit {
-  @Input() booksToRead: Book[];
+  @Input() books: Book[];
+  
 
   newTitle: string;
   newAuthor: string;
-  newYear: number;
-
-  books: Book[] = [
-    new Book('Little Women', 'Louisa May Alcott', 2020),
-    new Book('Harry Potter and the Prisoner of Azkaban', 'J. K. Rowling', 1999)    
-  ];
+  newYear: number;  
 
   constructor() { }
 
