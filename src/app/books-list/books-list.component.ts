@@ -13,6 +13,7 @@ export class BooksListComponent implements OnInit {
   newTitle: string;
   newAuthor: string;
   newYear: number;  
+  //removeBook = false;
 
   constructor() { }
 
@@ -22,5 +23,11 @@ export class BooksListComponent implements OnInit {
   addBook(){
     let book = new Book(this.newTitle, this.newAuthor, this.newYear)
     this.books.push(book);
+  }
+
+  removeBook(){
+    let book = new Book(this.newTitle, this.newAuthor, this.newYear);
+    let index = this.books.indexOf(book);
+    this.books.splice(index, 1)
   }
 }
